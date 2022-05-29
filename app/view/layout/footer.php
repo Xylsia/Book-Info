@@ -1,5 +1,6 @@
-        <footer>
-            <h1> Footer </h1>
-        </footer>
+            <footer>
+                <p>Book-Info | NSI Project | Singidunum 2022</p>
+            </footer>
+        </div>
     </body>
 </html>   
