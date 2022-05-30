@@ -12,6 +12,12 @@ header, footer {
     height: 5em;
 }
 
+.head > h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0.6em !important;
+}
+
 footer > p {
     text-align: center;
     font-size: 1.1rem;

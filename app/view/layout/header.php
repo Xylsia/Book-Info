@@ -14,5 +14,9 @@
     <body>
     <div class="wrap">
             <header>
-
+                <div class="head">
+                    <h1> Book-Info </h1>
+                </div>
+                <div class="nav">
+                </div>
             </header>
