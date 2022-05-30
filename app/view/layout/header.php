@@ -15,8 +15,18 @@
     <div class="wrap">
             <header>
                 <div class="head">
-                    <h1> Book-Info </h1>
-                </div>
-                <div class="nav">
+                    <div class="title">
+                        <h1><a href="./index.php"> Book-Info </a></h1>
+                    </div>
+                    <div class="nav">
+                        <form method="POST" action="./../controller/AuthController.php?logout">
+                            <ul>
+                                <li><a href="./login.php"> Login </a></li>
+                                <li><a href="./register.php"> Register </a></li>
+                                <li><a href="./profile.php"> Profile </a></li>
+                                <li><button id="logout-btn" type="submit"> Logout </button></li>
+                            </ul>
+                        </form>    
+                    </div>
                 </div>
             </header>

@@ -1,21 +1,63 @@
 * {
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     color: rgb(200, 202, 202);
 }
 
 html {
-    background-color: rgb(41, 41, 58);
+    background-color: rgb(52, 52, 67);
 }
 
 header, footer {
-    background-color: rgb(33, 33, 47);
+    background-color: rgb(36, 36, 46);
     height: 5em;
 }
 
-.head > h1 {
-    text-align: center;
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title > h1 {
+    justify-content: start;
     font-size: 2rem;
     margin-top: 0.6em !important;
+    margin-left: 1em;
+}    
+
+.title > h1 > a {
+    text-decoration: none !important;
+}
+
+.title > h1 > a:hover {
+    text-decoration: underline !important;
+}
+
+.nav {
+    display: flex;
+    margin-top: 1.6em;
+    margin-right: 1em;
+}
+
+.nav > form > ul {
+    list-style-type: none;
+}
+
+.nav > form > ul > li {
+    display: inline;
+    font-size: 1.3em;
+    margin-left: 0.5em;
+}
+
+.nav > form > ul > li > a {
+    text-decoration: none;
+}
+
+.nav > form > ul > li > a:hover {
+    text-decoration: underline;
+    color: rgb(61, 168, 132);
+    transition: 0.3s;
 }
 
 footer > p {
@@ -48,7 +90,7 @@ footer > p {
 
 .card-head > h2 {
     text-align: center;
-    background-color: rgb(36, 36, 52);
+    background-color: rgb(36, 36, 46);
     padding: 0.5em;
     font-size: 1.3rem;
     color: rgb(61, 168, 132);
@@ -92,11 +134,71 @@ footer > p {
 }
 
 #favorites-btn {
-    background-color: rgb(36, 36, 52);
+    background-color: rgb(36, 36, 46);
     font: rgb(200, 202, 202);
     margin-top: 1.3em;
     border: 0.1em solid rgb(200, 202, 202);
     padding: 0.5em;
     cursor: pointer;
     font-size: 1rem;
+}
+
+#favorites-btn:hover, .btn:hover {
+    color: rgb(61, 168, 132);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#logout-btn {
+    background-color: rgb(36, 36, 46);
+    color: rgb(200, 202, 202);
+    font-size: 1em;
+    border: none;
+}
+
+#logout-btn:hover {
+    color: rgb(61, 168, 132);
+    transition: 0.3s;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.form-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.form-wrap > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40em;
+    height: 20em;
+    border: 0.1em solid rgb(200, 202, 202);
+    background-color: rgb(36, 36, 46);
+    padding: 1em;
+    margin: 3em;
+    opacity: 0.9;
+}
+
+.input {
+    width: 25em;
+    height: 2em;
+    background-color: rgb(52, 52, 67);
+    border: 0.1em solid rgb(200, 202, 202);
+    font-size: 1.1rem;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+.btn {
+    margin-top: 3em;
+    height: 2em !important;
+    width: 25.6em !important;
+}
+
+.label {
+    margin: 0.3em 0 0.3em 0;
 }

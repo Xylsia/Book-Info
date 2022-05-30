@@ -15,11 +15,12 @@
                        "<div class=\"card\">
                             <div class=\"card-head\">
                                 <h2>" . $row['title'] . "</h2>
+                                <hr>
                             </div>
                             <div class=\"card-body\">
                                 <div class=\"pic-div\">
                                     <div class=\"picture\">
-                                        <img class=\"img\" name='id".$row['id']."' src='".$row['url']."'>
+                                        <img class=\"img\" name='id".$row['book_id']."' src='".$row['url']."'>
                                     </div>
                                     <div class=\"content\">
                                         <p> <b>Released:</b> " . $row['publication_year'] . "</p>
@@ -31,7 +32,7 @@
                                 </div>    
                                 <div class=\"details\">
                                     <p>" . $row['content'] . "</p>
-                                    <button id=\"favorites-btn\" name='".$row['id']."'> Add to Favorites </button>
+                                    <button id=\"favorites-btn\" name='".$row['book_id']."'> Add to Favorites </button>
                                 </div>
                             </div>
                         </div>";
