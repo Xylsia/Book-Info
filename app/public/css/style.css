@@ -79,6 +79,10 @@ footer > p {
     align-items: center;
 }
 
+.wrapper-calc {
+    min-height: calc(100vh - (80px + 80px));
+}
+
 .card {
     width: 30em;
     height: 25em;
@@ -90,7 +94,7 @@ footer > p {
 
 .card-head > h2 {
     text-align: center;
-    background-color: rgb(36, 36, 46);
+    background-color: rgb(40, 40, 52);
     padding: 0.5em;
     font-size: 1.3rem;
     color: rgb(61, 168, 132);
@@ -134,7 +138,7 @@ footer > p {
 }
 
 #favorites-btn {
-    background-color: rgb(36, 36, 46);
+    background-color: rgb(40, 40, 52);
     font: rgb(200, 202, 202);
     margin-top: 1.3em;
     border: 0.1em solid rgb(200, 202, 202);
@@ -163,6 +167,10 @@ footer > p {
     cursor: pointer;
 }
 
+#deleteBtn {
+    margin-top: 7.5em !important;
+}
+
 .form-wrap {
     display: flex;
     justify-content: center;
@@ -175,9 +183,9 @@ footer > p {
     width: 40em;
     height: 20em;
     border: 0.1em solid rgb(200, 202, 202);
-    background-color: rgb(36, 36, 46);
+    background-color: rgb(40, 40, 52);
     padding: 1em;
-    margin: 3em;
+    margin: 12em 3em 3em 3em;
     opacity: 0.9;
 }
 
@@ -202,3 +210,39 @@ label {
 .label {
     margin: 0.3em 0 0.3em 0;
 }
+
+#profile {
+    text-align: center;
+}
+
+/* Style the tab */
+.tab {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(40, 40, 52);
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 1.3rem;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    color: rgb(61, 168, 132);
+  }
+  
+  /* Style the tab content */
+  .tab-content {
+    display: none;
+    padding: 6px 12px;
+    justify-content: center;
+  }

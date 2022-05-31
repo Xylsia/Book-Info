@@ -1,4 +1,7 @@
-<?php require './../config/DBconnection.php' ?>
+<?php 
+    include './../config/DBconnection.php';
+    session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,10 +24,16 @@
                     <div class="nav">
                         <form method="POST" action="./../controller/AuthController.php?logout">
                             <ul>
-                                <li><a href="./login.php"> Login </a></li>
-                                <li><a href="./register.php"> Register </a></li>
-                                <li><a href="./profile.php"> Profile </a></li>
-                                <li><button id="logout-btn" type="submit"> Logout </button></li>
+                                <?php
+                                    if (isset($_SESSION['username'])) {
+                                        echo "<li><a href=\"./profile.php\"> Profile </a></li>
+                                              <li><button id=\"logout-btn\" type=\"submit\"> Logout </button></li>";
+                                    } 
+                                    else {
+                                        echo "<li><a href=\"./login.php\"> Login </a></li>
+                                              <li><a href=\"./register.php\"> Register </a></li>";
+                                    }
+                                ?>
                             </ul>
                         </form>    
                     </div>

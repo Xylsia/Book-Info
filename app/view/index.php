@@ -1,9 +1,10 @@
-<?php include 'layout/header.php';
-      include '../controller/BookController.php';
-      include '../controller/UserController.php';
+<?php 
+    include 'layout/header.php';
+    include '../controller/BookController.php';
+    include '../controller/UserController.php';
 ?>
 
-    <div class="wrapper">
+    <div class="wrapper wrapper-calc">
 
         <?php
             $sql = findAllBooks();
@@ -31,9 +32,13 @@
                                     </div>
                                 </div>    
                                 <div class=\"details\">
-                                    <p>" . $row['content'] . "</p>
-                                    <button id=\"favorites-btn\" name='".$row['book_id']."'> Add to Favorites </button>
-                                </div>
+                                    <p>" . $row['content'] . "</p>";
+
+                                    if (isset($_SESSION['username'])) {
+                                     echo "<button id=\"favorites-btn\" name='".$row['book_id']."'> Add to Favorites </button>";
+                                    }
+
+                        echo   "</div>
                             </div>
                         </div>";
                 }
