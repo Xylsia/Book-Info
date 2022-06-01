@@ -104,6 +104,7 @@
                         if ($password == $row['password']) {
                             session_start();
                             $_SESSION['username'] = $row['username'];
+                            $_SESSION['user_id'] = $row['user_id'];
                             header("Location: ../view/index.php?loginSuccess");
                             exit;
                         }

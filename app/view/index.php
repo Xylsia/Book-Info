@@ -1,7 +1,7 @@
 <?php 
     include 'layout/header.php';
     include '../controller/BookController.php';
-    include '../controller/UserController.php';
+    include '../controller/FavoritesController.php';
 ?>
 
     <div class="wrapper wrapper-calc">
@@ -35,7 +35,10 @@
                                     <p>" . $row['content'] . "</p>";
 
                                     if (isset($_SESSION['username'])) {
-                                     echo "<button id=\"favorites-btn\" name='".$row['book_id']."'> Add to Favorites </button>";
+                                     echo " <form method=\"POST\" action=\"../controller/FavoritesController.php?addFavorite\">
+                                                <input type=\"hidden\" name=\"book_id\" value='".$row['book_id']."' />
+                                                <button id=\"favorites-btn\" type=\"submit\" name=\"addFavoriteBtn\"> Add to Favorites </button>
+                                            </form>";
                                     }
 
                         echo   "</div>

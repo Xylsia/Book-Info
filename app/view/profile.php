@@ -1,7 +1,9 @@
 <?php
     include 'layout/header.php';
     include '../controller/UserController.php';
+    include '../controller/FavoritesController.php';
     $username = $_SESSION['username'];
+    $user_id = $_SESSION['user_id'];
 ?>
 
 <div class="wrapper-calc">
@@ -42,7 +44,10 @@
                                 </div>
                                 <div class=\"details\">
                                     <p>" . $row['content'] . "</p>
-                                     <button id=\"favorites-btn\" name='".$row['book_id']."'> Remove </button>
+                                     <form method=\"POST\" action=\"../controller/FavoritesController.php?removeFavorite\">
+                                        <input type=\"hidden\" name=\"book_id\" value='".$row['book_id']."' />
+                                        <button id=\"favorites-btn\" type=\"submit\" name=\"removeFavoriteBtn\"> Remove </button>
+                                    </form>    
                                 </div>
                             </div>
                         </div>";
