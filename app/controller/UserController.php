@@ -111,7 +111,7 @@
         $sql =     "DELETE users.*
                     FROM users
                     INNER JOIN favorites ON
-                    users.user_id = favorites.favorites_id
+                    users.user_id = favorites.user_id
                     WHERE 
                         users.username = '$username'";
 
