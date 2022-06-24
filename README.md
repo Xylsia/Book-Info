@@ -1,3 +1,3 @@
 # Book-Info
  
-University project written in Vanilla PHP and MySQL
+University project written in Vanilla PHP using procedural programming style and MySQL
